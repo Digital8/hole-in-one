@@ -1,0 +1,29 @@
+<div class="container">
+	<h1>List of Prizes</h1>
+	<h3>Best 50 win a prize</h2>
+
+	<br />
+
+	<table class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th>POS</th>
+				<th>Prize and Description</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<%
+				var i = 0;
+				_.each(prizes, function(prize) {
+					i++;
+			%>
+				<tr>
+					<td><%= i %></td>
+					<td><%= prize %></td>		
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+
+</div>

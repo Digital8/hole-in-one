@@ -1,0 +1,18 @@
+<form action="/shot/create" method="POST" class="form-signin">
+	<h2 class="form-signin-heading">Add a new Shot</h2>
+
+	<% if(flash && flash.err) { %>
+		<ul class="alert-danger">
+			<% Object.keys(flash.err).forEach(function(error) { %>
+				<li><b><%- flash.err[error]['name'] %></b>: <%- flash.err[error]['message'] %></li>
+			<% }) %>
+		</ul>
+	<% } %>
+
+	<input type="text" class="form-control" placeholder="First Name" name="first_name">
+	<input type="text" class="form-control" placeholder="Last Name" name="last_name">
+	<input type="text" class="form-control" placeholder="Distance (m)" name="distance">
+	<input type="submit" class="btn btn-lg btn-primary btn-block" value="Add Shot"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+</form>

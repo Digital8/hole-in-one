@@ -1,0 +1,23 @@
+{
+  "name": "hole-in-one",
+  "private": true,
+  "version": "0.0.0",
+  "description": "for epic awesome",
+  "dependencies": {
+    "sails": "~0.9.7",
+    "grunt": "0.4.1",
+    "sails-disk": "~0.9.0",
+    "ejs": "0.8.4",
+    "optimist": "0.3.4",
+    "bcrypt": "~0.7.6",
+    "sails-mongo": "~0.9.4"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js"
+  },
+  "main": "app.js",
+  "repository": "",
+  "author": "jeff@digital8.com.au",
+  "license": ""
+}
