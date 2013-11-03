@@ -133,8 +133,15 @@ function updateUserInDom(userId, message) {
 // User index page DOM manipulation logic
 // (i.e. backbone-style view)
 /////////////////////////////////////////////////
+var lastId = null;
 var ShotIndexPage = {
   addShot: function(shot) {
+    //there is some kinda funky duplicate socket going on with the reverse proxy    
+    if (lastId == shot.id)
+      return;
+    else
+      lastId = shot.id;
+
     var adminStr = '';
     adminStr += '<form action="/shot/destroy/' + shot.id + '" method="POST">';
     adminStr += '<input type="hidden" name="_method" value="delete"/>';
