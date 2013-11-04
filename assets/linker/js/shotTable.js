@@ -64,7 +64,7 @@ $(document).ready(function(){
 		"sDom": "t<'row'<'span8'i><'span8'p>>",
 		"sPaginationType": "bootstrap",
 		"oLanguage": {
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ shots",
+			"sInfo": "Showing _START_ to _END_ of _TOTAL_ shots"
 		},
 		"fnDrawCallback": function ( oSettings ) {
 			if ( oSettings.bSorted || oSettings.bFiltered )
