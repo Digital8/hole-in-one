@@ -1,0 +1,35 @@
+<div class="container">
+	<h3>Registrations</h3>
+
+	<table class='table table-striped table-bordered' id="shot-table">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Post Code</th>
+				<th>Age</th>
+				<th>Android</th>
+				<th>iPhone</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% _.each(registers, function(register) { %>
+				<tr data-id="<%= register.id %>" data-model="register">
+					<td></td>
+					<td><%= register.first_name %></td>
+					<td><%= register.last_name %></td>
+					<td><%= register.email %></td>
+					<td><%= register.phone %></td>
+					<td><%= register.post_code %></td>
+					<td><%= register.age %></td>
+					<td><%= register.android %></td>
+					<td><%= register.iphone %></td>
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+
+</div>

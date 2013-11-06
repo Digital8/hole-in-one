@@ -35,6 +35,11 @@ module.exports.policies = {
 		subscribe: "flash",
 		destroy: "admin",
 		'*': "admin"
+	},
+
+	register: {
+		'new': "flash",
+		"*": "admin"
 	}
 
 	/*
