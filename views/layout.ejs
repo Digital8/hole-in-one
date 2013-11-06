@@ -46,7 +46,7 @@
             <li><a href="/prizes">Prizes </a> </li>
             <li><a href="/register/new">Register </a> </li>
             <% if (session.authenticated) { %>
-              <li><a href="/user/show/<%= session.User.id %>"><%= session.User.name %> </a> </li>
+              <li><a href="/register">Registrations </a> </li>
             <% } %>
             <% if (session.authenticated && session.User.admin) { %>
               <li><a href="/user">User Administration</a></li>
@@ -54,7 +54,6 @@
           </ul>
           <div class="navbar-right">
             <% if (session.authenticated) { %>
-              <a class="btn btn-default navbar-btn navbar-right" href="/register">Registrations</a>
               <a class="btn btn-default navbar-btn navbar-right" href="/session/destroy">Log Out</a>
             <% } %>
           </div>

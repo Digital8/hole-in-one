@@ -39,6 +39,8 @@ module.exports.policies = {
 
 	register: {
 		'new': "flash",
+		create: "flash",
+		index: "authenticated",
 		"*": "admin"
 	}
 
