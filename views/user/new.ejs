@@ -4,7 +4,7 @@
 	<% if(flash && flash.err) { %>
 		<ul class="alert-danger">
 			<% Object.keys(flash.err).forEach(function(error) { %>
-				<li><b><%- flash.err[error]['name'] %></b>: <%- flash.err[error]['message'] %></li>
+				<li><b><%- JSON.stringify(flash.err[error]).replace(/[{}]/g, '') %></li>
 			<% }) %>
 		</ul>
 	<% } %>

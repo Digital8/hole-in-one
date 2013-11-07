@@ -43,20 +43,20 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Leaderboard </a> </li>
+            <li><a href="/putting">Putting Comp</a> </li>
             <li><a href="/prizes">Prizes </a> </li>
+            <li><a href="/terms">Terms </a> </li>
             <li><a href="/register/new">Register </a> </li>
-            <% if (session.authenticated) { %>
-              <li><a href="/register">Registrations </a> </li>
-            <% } %>
-            <% if (session.authenticated && session.User.admin) { %>
-              <li><a href="/user">User Administration</a></li>
-            <% } %>
           </ul>
-          <div class="navbar-right">
+          <ul class="nav navbar-nav navbar-right">
             <% if (session.authenticated) { %>
+              <% if (session.User.admin) { %>
+                <li><a href="/user">Users</a></li>
+              <% } %>
+              <li><a href="/register">Registrations </a> </li>
               <a class="btn btn-default navbar-btn navbar-right" href="/session/destroy">Log Out</a>
             <% } %>
-          </div>
+          </ul>
           <% if (false) { %>
             <form class="navbar-form navbar-right" action="/session/create">
             <div class="form-group">
@@ -82,6 +82,12 @@
           <a href="http://www.mobileappsaus.com/" target="_blank">Mobile Apps Australia</a>
         </div>
       </footer>
+
+      <footer class="footer">
+        <div>
+          <a href="/terms">Terms and Conditions</a>
+        </div>
+      </footer>
     </div>
 
     <!--TEMPLATES-->
@@ -98,6 +104,7 @@
     <script src="/linker/js/bootstrap.js"></script>
     <script src="/linker/js/customValidate.js"></script>
     <script src="/linker/js/datatables-bootstrap.js"></script>
+    <script src="/linker/js/regoTable.js"></script>
     <script src="/linker/js/shotTable.js"></script>
     <script src="/linker/js/underscore.js"></script>
     <!--SCRIPTS END-->
