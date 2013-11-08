@@ -30,6 +30,8 @@ module.exports = {
         req.session.flash = {
           err: err
         }
+
+        return res.redirect('/shot/new');
       }
       else {
 
@@ -39,9 +41,8 @@ module.exports = {
 
         Shot.publishCreate(oShot);
 
+        return res.redirect('/');
       }
-
-      return res.redirect('/');
 
     });
   },
