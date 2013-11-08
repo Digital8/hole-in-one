@@ -23,21 +23,24 @@ $(document).ready(function(){
 			{ "bSortable": false, "aTargets": [ 3 ] },
 			{ "bSortable": false, "aTargets": [ 4 ] }
 		],
-		"aaSorting": [[ 3, 'asc' ]],
+		"aaSorting": [[ 3, 'asc' ]],*/
 		"bAutoWidth": false, // Disable the auto width calculation 
 		"aoColumns": [
+			{ "sWidth": "5%" },
+			{ "sWidth": "15%" },
+			{ "sWidth": "15%" },
+			{ "sWidth": "25%" },
+			{ "sWidth": "15%" },
 			{ "sWidth": "10%" },
-			{ "sWidth": "20%" },
-			{ "sWidth": "20%" },
-			{ "sWidth": "10%" },
-			{ "sWidth": "40%" }			
-		],*/
+			{ "sWidth": "5%" },
+			{ "sWidth": "10%" }			
+		],
 		"iDisplayLength": 20
 	}
 
 	if (window.digital8.admin == "true") {
 		//oSettings["aoColumnDefs"].push({ "bSortable": false, "aTargets": [ 5 ] });
-		//oSettings["aoColumns"].push({ "sWidth": "10%" });
+		oSettings["aoColumns"].push({ "sWidth": "10%" });
 	}
 
 	$('#rego-table').dataTable( oSettings );
