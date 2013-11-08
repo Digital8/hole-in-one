@@ -1,0 +1,42 @@
+<div class="container">
+	<h3>5 Shots from 5 distances. $500 First Place.</h3>
+
+	<% if (session.authenticated) { %>
+		<a href="/shot/new" class="add-shot btn btn-primary btn-lg">Add Shot</a>
+	<% } %>
+
+	<table class='table table-striped table-bordered' id="shot-table">
+		<thead>
+			<tr>
+				<th>POS</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Shots In</th>
+				<th>Prize</th>
+				<% if (session.authenticated && session.User.admin) { %>
+					<th></th>
+				<% } %>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% _.each(shots, function(shot) { %>
+				<tr data-id="<%= shot.id %>" data-model="putt">
+					<td></td>
+					<td><%= shot.first_name %></td>
+					<td><%= shot.last_name %></td>
+					<td><%= shot.shots %></td>
+					<td></td>
+					<% if (session.authenticated && session.User.admin) { %>
+						<td><form action="/putt/destroy/<%= shot.id %>" method="POST">
+							<input type="hidden" name="_method" value="delete"/>
+							<input type="submit" class="btn btn-sm btn-danger" value="Delete"/>
+							<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+						</form></td>
+					<% } %>			
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+
+</div>

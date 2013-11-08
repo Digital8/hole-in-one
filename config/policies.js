@@ -37,6 +37,15 @@ module.exports.policies = {
 		'*': "admin"
 	},
 
+	putt: {
+		'new': ["flash", "authenticated"],
+		index: "flash",
+		create: ["flash", "authenticated"],
+		subscribe: "flash",
+		destroy: "admin",
+		'*': "admin"
+	},
+
 	register: {
 		'new': "flash",
 		create: "flash",
