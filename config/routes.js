@@ -46,6 +46,10 @@ module.exports.routes = {
   '/prizes': {
     controller: 'PrizeController',
     action: 'index'
+  },
+
+  '/terms': {
+    view: 'static/terms'
   }
 
   /*
