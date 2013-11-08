@@ -57,7 +57,7 @@ module.exports = {
         if (err) return next(err);
       });        
 
-      res.redirect('/');
+      res.redirect('/register');
 
     });
   },

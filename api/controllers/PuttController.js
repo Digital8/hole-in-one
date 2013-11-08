@@ -35,7 +35,7 @@ module.exports = {
       }
       else {
 
-        return res.redirect('/');
+        return res.redirect('/putt');
       }
 
     });
@@ -65,7 +65,7 @@ module.exports = {
 
       });        
 
-      res.redirect('/');
+      res.redirect('/putt');
 
     });
   }
