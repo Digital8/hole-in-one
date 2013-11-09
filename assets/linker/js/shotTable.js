@@ -83,7 +83,7 @@ $(document).ready(function(){
 			{ "bSortable": false, "aTargets": [ 3 ] },
 			{ "bSortable": false, "aTargets": [ 4 ] }
 		],
-		"aaSorting": [[ 3, 'desc' ]],
+		"aaSorting": [[ 3, 'asc' ]],
 		"bAutoWidth": false, // Disable the auto width calculation 
 		"aoColumns": [
 			{ "sWidth": "10%" },
